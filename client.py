@@ -1,19 +1,18 @@
-"The Interpreter Pattern Use Case Example"
-
 from sentence_parser import Parser
 
 
-# SENTENCE = "5 + IV - 3 + VII - 2"
-# SENTENCE = "V + IV - III + 7 - II"
-SENTENCE= "CIX + V"
-# SENTENCE = "CIX + V - 3 + VII - 2"
-# SENTENCE = "MMMCMXCIX - CXIX + MCXXII - MMMCDXII - XVIII - CCXXXV"
-print(SENTENCE)
+OPERACION = "5 + IV - 3 + VII - 2"
+# OPERACION = "V + IV - III + 7 - II"
+# OPERACION= "CIX + V"
+# OPERACION = "CIX + V - 3 + VII - 2"
+# OPERACION = "MMMCMXCIX - CXIX + MCXXII - MMMCDXII - XVIII - CCXXXV"
+# OPERACION = input()
 
-AST_ROOT = Parser.parse(SENTENCE)
+print(OPERACION)
 
-# Interpret recursively through the full AST starting from the root.
+AST_ROOT = Parser.parse(OPERACION)
+
+# Llamado al interprte recursivamente
 print(AST_ROOT.interpret())
 
-# Print out a representation of the AST_ROOT
-print(AST_ROOT)
+# Impresion de la representacion de la raiz
